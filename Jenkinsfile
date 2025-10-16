@@ -22,6 +22,7 @@ pipeline {
       steps {
         container('nix') {
           sh '''
+            whoami
             echo "Building hello-flake from flake.nix"
             nix build .#hello-flake
             ls -l result
