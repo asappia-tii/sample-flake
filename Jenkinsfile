@@ -1,8 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      label 'nix-agent'
-      defaultContainer 'nix'
+      label 'nix-agent-as'
     }
   }
 
