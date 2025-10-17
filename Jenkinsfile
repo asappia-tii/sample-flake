@@ -25,6 +25,7 @@ pipeline {
             whoami
             pwd
             ls -lR
+            ps auxww
             echo "Building hello-flake from flake.nix"
             nix build .#hello-flake
             ls -l result
