@@ -22,10 +22,7 @@ pipeline {
       steps {
         container('nix') {
           sh '''
-            whoami
-            pwd
-            ls -lR
-            ps auxww
+            ls -la /nix/var/nix/daemon-socket/socket
             echo "Building hello-flake from flake.nix"
             nix build .#hello-flake
             ls -l result
